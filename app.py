@@ -4,6 +4,7 @@ Monitoring users plex and stop Docker transmission and deluge
 import time 
 import requests
 from config import TOKEN_ID,CHAT_ID,tautulli_apikey,tautulli_url_port,docker_nas_url
+
 response = requests.get('http://'+tautulli_url_port+'/api/v2?apikey='+tautulli_apikey+'&cmd=get_activity')
 
 if response.status_code == 200:  
